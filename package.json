@@ -1,0 +1,23 @@
+{
+  "name": "cyan",
+  "version": "0.0.0",
+  "description": "Message client for magenta",
+  "main": "Gruntfile.js",
+  "scripts": {
+  },
+  "repository": "",
+  "author": "Tim Park <timfpark@gmail.com>",
+  "license": "BSD",
+  "devDependencies": {
+    "express": "*",
+    "grunt": "0.4.0rc5",
+    "grunt-neuter": "~0.3.0",
+    "grunt-contrib-uglify": "~0.1.1rc5",
+    "grunt-contrib-jshint": "~0.1.1rc5",
+    "grunt-contrib-qunit": "~0.1.1rc5",
+    "grunt-ember-templates": "~0.4.2rc5",
+    "grunt-contrib-watch": "~0.2.0rc5",
+    "mongoose": "*",
+    "request": "*"
+  }
+}
