@@ -1,7 +1,20 @@
-<ul id="message-list">
-  {{#each message in controller}}
-    <li>
-        {{message.timestamp}}
-    </li>
-  {{/each}}
-</ul>
+<h3>Messages</h3>
+
+{{#if controller.haveMessages}}
+	<ul id="message-list">
+	  {{#each message in controller}}
+	    <li>
+	        {{message.body}}
+	    </li>
+	  {{/each}}
+	</ul>
+{{else}}
+  <p>(No messages yet.)</p>
+{{/if}}
+
+<div class="input-append">
+  {{view Ember.TextField valueBinding="messageBody" placeholder="Compose new message..."}}
+  <button class="btn btn-primary" {{action "add" target="controller"}}>Add</button>
+</div>
+
+<br/>

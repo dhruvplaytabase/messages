@@ -38,6 +38,8 @@ require('dependencies/ember-data');
 */
 require('dependencies/compiled/templates');
 
+require('dependencies/bootstrap');
+
 /*
   Creates a new instance of an Ember application and
   specifies what HTML element inside index.html Ember
@@ -51,11 +53,8 @@ if (window.TESTING) {
   window.App.deferReadiness();
 }
 
-App.Store = DS.Store.extend({
-  revision: 11, adapter: DS.RESTAdapter.extend({
-  	url: "http://localhost:3030"
-//  , namespace: "api/v1"
-  })
+App.store = DS.Store.create({
+  revision: 11
 });
 
 // Models 
@@ -64,6 +63,7 @@ require('app/models/message');
 // Views
 
 // Controllers
+require('app/controllers/messages');
 
 // Router 
 require('app/routes/router');

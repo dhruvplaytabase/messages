@@ -6,13 +6,17 @@ var Config = require('./config'),
 var app = express();
 var config = new Config();
 
+/* enable us to parse json content from body */
 app.use(express.bodyParser());
+
+/* serve static content out of 'build' directory */ 
+app.use(express.static(__dirname + '/build'));
 
 app.get('/messages/:id', controllers.messages.findById);
 app.get('/messages', controllers.messages.findAll);
 app.post('/messages', controllers.messages.create);
 
-console.log("mongodb: " + config.mongodb_connection_string);
+console.log("mongodb connection string: " + config.mongodb_connection_string);
 mongoose.connect(config.mongodb_connection_string);
 
 var db = mongoose.connection;
@@ -23,4 +27,4 @@ db.once('open', function callback() {
 port = process.env.PORT || config.http_port || 3030;
 
 app.listen(port);
-console.log('listening for http connections on port ' + port + '...');
+console.log('backend ready, listening on port ' + port + '...');

@@ -1,6 +1,4 @@
-var mongoose = require('mongoose'),
-	Schema = mongoose.Schema,
-    Mixed = Schema.Types.Mixed;
+var mongoose = require('mongoose');
 
 var messageSchema = mongoose.Schema({
 	timestamp: { type: Date, default: Date.now },

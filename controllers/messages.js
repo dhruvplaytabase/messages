@@ -18,7 +18,7 @@ exports.findById = function(req, res) {
 };
 
 exports.create = function(req, res) {
-	var message = new Message(req.body);
+	var message = new Message(req.body.message);
 
 	message.save(function(err, obj) {
 		if (err) return res.send(400, err);
