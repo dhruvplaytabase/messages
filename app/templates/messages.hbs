@@ -1,10 +1,8 @@
-<h3>Messages</h3>
-
 {{#if controller.haveMessages}}
-	<ul id="message-list">
+	<ul style="list-style-type: none;">
 	  {{#each message in controller}}
 	    <li>
-	        {{message.body}}
+	        {{message.body}} {{message.timestampString}}
 	    </li>
 	  {{/each}}
 	</ul>
