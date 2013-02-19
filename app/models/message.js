@@ -8,8 +8,11 @@ App.Message = DS.Model.extend({
   	if (!timestamp) return "";
 
   	var month = timestamp.getMonth() + 1;
+  	var minutes = timestamp.getMinutes();
+  	if (minutes < 10)
+  		minutes = "0" + minutes;
 
-  	return "(" + timestamp.getHours() + ":" + timestamp.getMinutes() + " " + timestamp.getDate() + "/" + month + "/" + timestamp.getFullYear() + ")";
+  	return "(" + timestamp.getHours() + ":" + minutes + " " + timestamp.getDate() + "/" + month + "/" + timestamp.getFullYear() + ")";
   }.property('timestamp')
 
 });

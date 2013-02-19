@@ -50,10 +50,11 @@ function program4(depth0,data) {
   stack1 = helpers['if'].call(depth0, "controller.haveMessages", {hash:{},inverse:self.program(4, program4, data),fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\r\n\r\n<div class=\"input-append\">\r\n  ");
-  hashTypes = {'valueBinding': "STRING",'placeholder': "STRING"};
+  hashTypes = {'valueBinding': "STRING",'placeholder': "STRING",'classNames': "STRING"};
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "Ember.TextField", {hash:{
     'valueBinding': ("messageBody"),
-    'placeholder': ("Compose new message...")
+    'placeholder': ("Compose new message..."),
+    'classNames': ("span8")
   },contexts:[depth0],types:["ID"],hashTypes:hashTypes,data:data})));
   data.buffer.push("\r\n  <button class=\"btn btn-primary\" ");
   hashTypes = {'target': "STRING"};
