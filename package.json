@@ -1,14 +1,9 @@
 {
-  "name": "cyan",
-  "version": "0.0.0",
-  "description": "Message client for magenta",
-  "main": "Gruntfile.js",
-  "scripts": {
-  },
-  "repository": "",
+  "name": "messages",
+  "version": "0.0.1",
+  "description": "Sample client MVC application",
   "author": "Tim Park <timfpark@gmail.com>",
-  "license": "BSD",
-  "devDependencies": {
+  "dependencies": {
     "express": "*",
     "grunt": "0.4.0rc5",
     "grunt-neuter": "~0.3.0",
