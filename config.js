@@ -6,7 +6,7 @@ module.exports = function() {
             host: "qwitter.azurewebsites.net",
             protocol: "http",
 
-            mongodb_connection_string: ""
+            mongodb_connection_string: "mongodb://qwitter-mongodb:FoX2HADY1BXLUR20I_z0iYpyBM1LjyMUqg6ZyJ_8fl8-@ds041157.mongolab.com:41157/qwitter-mongodb"
         };
     } else if (process.env.NODE_ENV == "test") {
         config = {
