@@ -12,8 +12,8 @@ app.use(express.bodyParser());
 /* serve static content out of 'build' directory */ 
 app.use(express.static(__dirname + '/build'));
 
-app.get('/messages/:id', controllers.messages.findById);
-app.get('/messages', controllers.messages.findAll);
+app.get('/messages/:id', controllers.messages.show);
+app.get('/messages', controllers.messages.index);
 app.post('/messages', controllers.messages.create);
 
 console.log("mongodb connection string: " + config.mongodb_connection_string);
