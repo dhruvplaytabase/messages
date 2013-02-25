@@ -2,10 +2,10 @@ var config = null;
 
 if (process.env.NODE_ENV == "production") {
     config = {
-        host: "qwitter.azurewebsites.net",
+        host: process.env.HOST_NAME,
         protocol: "http",
 
-        mongodb_connection_string: "mongodb://MongoLab-1:xKQHaYM_B4nYSg_wwCxvV39E9MnNbwyv7GbIo_t4x4I-@ds041167.mongolab.com:41167/MongoLab-1"
+        mongodb_connection_string: process.env.MONGODB_CONNECTION_STRING
     };
 } else if (process.env.NODE_ENV == "test") {
     config = {
