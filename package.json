@@ -1,12 +1,12 @@
 {
   "name": "messages",
   "version": "0.0.1",
-  "description": "Sample client MVC application",
+  "description": "Sample client based application",
   "author": "Tim Park <timfpark@gmail.com>",
   "dependencies": {
-    "express": "*",
-    "mongoose": "*",
-    "request": "*"
+    "express": "3.x",
+    "mongoose": "3.x",
+    "request": "2.x"
   },
   "devDependencies": {
     "grunt": "0.4.0rc5",

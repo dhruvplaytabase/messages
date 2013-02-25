@@ -1,10 +1,9 @@
-var Config = require('./config'),
+var config = require('./config'),
     controllers = require('./controllers'),
     express = require('express'),
     mongoose = require('mongoose');
 
 var app = express();
-var config = new Config();
 
 /* enable us to parse json content from body */
 app.use(express.bodyParser());
@@ -12,9 +11,9 @@ app.use(express.bodyParser());
 /* serve static content out of 'build' directory */ 
 app.use(express.static(__dirname + '/build'));
 
-app.get('/messages/:id', controllers.messages.show);
-app.get('/messages', controllers.messages.index);
 app.post('/messages', controllers.messages.create);
+app.get('/messages', controllers.messages.index);
+app.get('/messages/:id', controllers.messages.show);
 
 console.log("mongodb connection string: " + config.mongodb_connection_string);
 mongoose.connect(config.mongodb_connection_string);

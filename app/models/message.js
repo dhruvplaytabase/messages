@@ -2,7 +2,7 @@ App.Message = DS.Model.extend({
   timestamp: DS.attr('date'),
   body: DS.attr('string'),
 
-  // example of a property - there are obviously more globalized ways of doing this.
+  // example of a property
   timestampString: function() {
   	var timestamp = this.get('timestamp');
   	if (!timestamp) return "";

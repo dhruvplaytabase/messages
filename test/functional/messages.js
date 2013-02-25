@@ -2,10 +2,8 @@ process.env.NODE_ENV = 'test';
 
 var app = require('../../server'),
 	assert = require('assert'),
-	Config = require('../../config'),
+	config = require('../../config'),
     request = require('request');
-
-var config = new Config();
 
 describe('messages REST endpoint', function() {
 
