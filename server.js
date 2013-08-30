@@ -7,9 +7,21 @@ var app = express();
 
 /* enable us to parse json content from body */
 app.use(express.bodyParser());
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Methods', 'OPTIONS,GET,POST,PUT,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-/* serve static content out of 'build' directory */ 
-app.use(express.static(__dirname + '/build'));
+    // intercept OPTIONS method and just send result immediately
+    if ('OPTIONS' == req.method) {
+        res.send(200);
+    } else {
+        next();
+    }
+});
+
+app.use(express.logger());
 
 /* routes to hook up messages resource endpoints. */
 app.post('/messages', controllers.messages.create);

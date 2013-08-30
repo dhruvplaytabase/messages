@@ -1,7 +1,7 @@
 {
   "name": "messages",
-  "version": "0.0.1",
-  "description": "Sample client based application",
+  "version": "0.0.2",
+  "description": "Sample REST API backend for messages-frontend application",
   "author": "Tim Park <timfpark@gmail.com>",
   "dependencies": {
     "express": "3.x",
@@ -9,12 +9,5 @@
     "request": "2.x"
   },
   "devDependencies": {
-    "grunt": "0.4.0rc5",
-    "grunt-neuter": "~0.3.0",
-    "grunt-contrib-uglify": "~0.1.1rc5",
-    "grunt-contrib-jshint": "~0.1.1rc5",
-    "grunt-contrib-qunit": "~0.1.1rc5",
-    "grunt-ember-templates": "*",
-    "grunt-contrib-watch": "~0.2.0rc5"
   }
 }
