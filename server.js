@@ -7,7 +7,9 @@ var app = express();
 
 /* enable us to parse json content from body */
 app.use(express.bodyParser());
+
 app.use(function(req, res, next) {
+    // very permissive origin setting, in production you'd allow only your site to connect.
     res.header('Access-Control-Allow-Origin', "*");
     res.header('Access-Control-Allow-Credentials', true);
     res.header('Access-Control-Allow-Methods', 'OPTIONS,GET,POST,PUT,DELETE');
